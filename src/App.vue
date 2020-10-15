@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <BaseLayout>
+      <template slot="header">
+        <Header></Header>
+      </template>
+      <template slot="body">
+        <router-view></router-view>
+        <!-- <AddItem></AddItem>
+        <DoDone></DoDone> -->
+      </template>
+    </BaseLayout>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BaseLayout from "./pages/base-layout/baseLayout";
+import Header from "./pages/header/header";
+import store from "./vuex/store";
+import router from "./router/routes";
 
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {};
+  },
   components: {
-    HelloWorld
-  }
-}
+    BaseLayout,
+    Header,
+  },
+  store,
+  router,
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
+

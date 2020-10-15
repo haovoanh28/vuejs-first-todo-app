@@ -1,0 +1,59 @@
+.dodone {
+  height: 400px;
+  margin: 0 5%;
+}
+
+.dodone__buttons {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dodone__buttons button {
+  width: 48%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.dodone__buttons-todo {
+  background-color: #1ad1ff;
+}
+
+.dodone__buttons-todo--active {
+  background-color: #007b9a;
+}
+
+.dodone__buttons-done {
+  background-color: #33cc33;
+}
+
+.dodone__buttons-done--active {
+  background-color: #1a661a;
+}
+
+.dodone__body {
+  height: 100%;
+}
+
+.dodone__body > * {
+  overflow-y: auto;
+}
+
+.dodone__todo {
+  height: 100%;
+}
+
+.dodone__done {
+  height: 100%;
+}
+/*# sourceMappingURL=dodone.styles.css.map */

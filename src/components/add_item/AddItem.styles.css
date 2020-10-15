@@ -1,0 +1,57 @@
+.add_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add_item > * {
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.add_item button {
+  padding: 0.5rem;
+}
+
+.formgroup * {
+  width: 100%;
+}
+
+.formgroup label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.formgroup input {
+  padding: 0.5rem;
+}
+
+.formgroup input::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+
+.formgroup input:-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.formgroup input::-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.formgroup input::placeholder {
+  text-transform: uppercase;
+}
+
+.formgroup textarea {
+  resize: none;
+  height: 10rem;
+}
+/*# sourceMappingURL=AddItem.styles.css.map */

@@ -1,0 +1,53 @@
+@import "../../scss/_variables";
+
+.dodone {
+  height: 400px;
+  margin: 0 5%;
+}
+
+.dodone__buttons {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  button {
+    width: 48%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: white;
+  }
+
+  &-todo {
+    background-color: $blue-color;
+
+    &--active {
+      background-color: darken($blue-color, 25%);
+    }
+  }
+
+  &-done {
+    background-color: $green-color;
+    &--active {
+      background-color: darken($green-color, 25%);
+    }
+  }
+}
+
+.dodone__body {
+  height: 100%;
+
+  & > * {
+    overflow-y: auto;
+  }
+}
+
+.dodone__todo {
+  height: 100%;
+}
+
+.dodone__done {
+  height: 100%;
+}

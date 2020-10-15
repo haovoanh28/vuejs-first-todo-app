@@ -1,0 +1,38 @@
+.header {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+  display: flex;
+  align-items: center;
+  background-color: cornsilk;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  a {
+    text-decoration: none;
+    width: 50%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:visited,
+    &:link {
+      color: black;
+    }
+
+    &:hover {
+      letter-spacing: 2px;
+    }
+  }
+
+  &--active {
+    background-color: darken(cornsilk, 15%);
+  }
+}

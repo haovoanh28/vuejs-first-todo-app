@@ -1,0 +1,39 @@
+.add_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > * {
+    margin-bottom: 2rem;
+    width: 90%;
+  }
+
+  button {
+    padding: 0.5rem;
+  }
+}
+
+.formgroup {
+  & * {
+    width: 100%;
+  }
+
+  label {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    padding: 0.5rem;
+
+    &::placeholder {
+      text-transform: uppercase;
+    }
+  }
+
+  textarea {
+    resize: none;
+    height: 10rem;
+  }
+}
