@@ -2,13 +2,34 @@
   <div class="add_item">
     <div class="formgroup">
       <label for="work_name">work name</label>
-      <input type="text" v-model.trim="workName" id="work_name" required />
+      <input
+        type="text"
+        v-model.trim="workName"
+        id="work_name"
+        @keypress.enter="addWork"
+        required
+      />
     </div>
     <div class="formgroup">
       <label for="work_des">work description</label>
-      <textarea name="work_des" id="work_des" v-model.trim="workDes"></textarea>
+      <textarea
+        name="work_des"
+        id="work_des"
+        v-model.trim="workDes"
+        @keypress.enter="addWork"
+      ></textarea>
     </div>
     <button @click="addWork">Add</button>
+
+    <ul class="errors" v-if="errors">
+      <li
+        class="errors__item"
+        v-for="(error, index) in errors"
+        :key="`error-${index}`"
+      >
+        {{ error }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -21,11 +42,22 @@ export default {
     return {
       workName: "",
       workDes: "",
+      errors: [],
     };
   },
   methods: {
     addWork() {
-      if (!this.workName || !this.workDes) return;
+      this.errors = [];
+      if (!this.workName) {
+        this.errors.push("Please enter work name !!!");
+        return;
+      }
+
+      if (!this.workDes) {
+        this.errors.push("Please enter work description !!!");
+        return;
+      }
+
       let date = new Date();
 
       this.addTodoItem({
@@ -41,6 +73,7 @@ export default {
 
       this.workName = "";
       this.workDes = "";
+      this.errors = [];
     },
     ...mapActions(["addTodoItem"]),
   },

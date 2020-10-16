@@ -37,3 +37,11 @@
     height: 10rem;
   }
 }
+
+.errors {
+  list-style-type: none;
+
+  &__item {
+    color: red;
+  }
+}

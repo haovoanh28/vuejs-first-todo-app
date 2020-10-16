@@ -54,4 +54,12 @@
   resize: none;
   height: 10rem;
 }
+
+.errors {
+  list-style-type: none;
+}
+
+.errors__item {
+  color: red;
+}
 /*# sourceMappingURL=AddItem.styles.css.map */
